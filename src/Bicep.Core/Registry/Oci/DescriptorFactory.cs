@@ -5,6 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System;
 using System.Text;
+using Azure.Containers.ContainerRegistry.Specialized;
 
 namespace Bicep.Core.Registry.Oci
 {
@@ -17,8 +18,16 @@ namespace Bicep.Core.Registry.Oci
         {
             var digest = ComputeDigest(algorithmIdentifier, streamDescriptor.Stream);
 
-            return new OciDescriptor(streamDescriptor.MediaType, digest, streamDescriptor.Stream.Length, streamDescriptor.Annotations);
+            return new OciDescriptor(streamDescriptor.MediaType, digest, streamDescriptor.Stream.Length);
         }
+
+        public static OciBlobDescriptor CreateSdkDescriptor(string algorithmIdentifier, StreamDescriptor streamDescriptor) =>
+            new()
+            {
+                MediaType = streamDescriptor.MediaType,
+                Digest = ComputeDigest(algorithmIdentifier, streamDescriptor.Stream),
+                Size = streamDescriptor.Stream.Length
+            };
 
         public static string ComputeDigest(string algorithmIdentifier, Stream stream)
         {

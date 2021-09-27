@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using UploadManifestOptions = Bicep.Core.RegistryClient.UploadManifestOptions;
 
 namespace Bicep.Core.Registry
 {
@@ -42,37 +41,33 @@ namespace Bicep.Core.Registry
 
         public async Task PushArtifactAsync(OciArtifactModuleReference moduleReference, StreamDescriptor config, params StreamDescriptor[] layers)
         {
-            // TODO: Add similar exception handling as in the pull* method
-
             // TODO: How do we choose this? Does it ever change?
             var algorithmIdentifier = DescriptorFactory.AlgorithmIdentifierSha256;
 
             var blobClient = this.CreateBlobClient(moduleReference);
 
             config.ResetStream();
-            var configDescriptor = DescriptorFactory.CreateDescriptor(algorithmIdentifier, config);
+            var manifest = new Azure.Containers.ContainerRegistry.Specialized.OciManifest
+            {
+                SchemaVersion = 2,
+                Config = DescriptorFactory.CreateSdkDescriptor(algorithmIdentifier, config)
+            };
 
             config.ResetStream();
-            var configUploadResult = await blobClient.UploadBlobAsync(config.Stream);
+            await blobClient.UploadBlobAsync(config.Stream);
 
-            var layerDescriptors = new List<OciDescriptor>(layers.Length);
             foreach (var layer in layers)
             {
                 layer.ResetStream();
-                var layerDescriptor = DescriptorFactory.CreateDescriptor(algorithmIdentifier, layer);
-                layerDescriptors.Add(layerDescriptor);
+                var layerDescriptor = DescriptorFactory.CreateSdkDescriptor(algorithmIdentifier, layer);
+                manifest.Layers.Add(layerDescriptor);
 
                 layer.ResetStream();
-                var layerUploadResult = await blobClient.UploadBlobAsync(layer.Stream);
-            }
+                await blobClient.UploadBlobAsync(layer.Stream);
+            }            
 
-            var manifest = new OciManifest(2, configDescriptor, layerDescriptors);
-            using var manifestStream = new MemoryStream();
-            OciSerialization.Serialize(manifestStream, manifest);
-
-            manifestStream.Position = 0;
             // BUG: the client closes the stream :(
-            var manifestUploadResult = await blobClient.UploadManifestAsync(manifestStream, new UploadManifestOptions(ContentType.ApplicationVndOciImageManifestV1Json, moduleReference.Tag));
+            await blobClient.UploadManifestAsync(manifest, new UploadManifestOptions { Tag = moduleReference.Tag });
         }
 
         private static Uri GetRegistryUri(OciArtifactModuleReference moduleReference) => new Uri($"https://{moduleReference.Registry}");
@@ -120,7 +115,7 @@ namespace Bicep.Core.Registry
             }
         }
 
-        private static async Task<Stream> ProcessManifest(BicepRegistryBlobClient client, OciManifest manifest)
+        private static async Task<Stream> ProcessManifest(ContainerRegistryBlobClient client, OciManifest manifest)
         {
             ProcessConfig(manifest.Config);
             if (manifest.Layers.Length != 1)
@@ -152,7 +147,7 @@ namespace Bicep.Core.Registry
             }
         }
 
-        private static async Task<Stream> ProcessLayer(BicepRegistryBlobClient client, OciDescriptor layer)
+        private static async Task<Stream> ProcessLayer(ContainerRegistryBlobClient client, OciDescriptor layer)
         {
             if(!string.Equals(layer.MediaType, BicepMediaTypes.BicepModuleLayerV1Json, MediaTypeComparison))
             {
