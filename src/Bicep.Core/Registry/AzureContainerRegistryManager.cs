@@ -7,7 +7,6 @@ using Azure.Core;
 using Bicep.Core.Modules;
 using Bicep.Core.Registry.Oci;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -74,7 +73,7 @@ namespace Bicep.Core.Registry
 
         private ContainerRegistryBlobClient CreateBlobClient(OciArtifactModuleReference moduleReference) => this.clientFactory.CreateBlobClient(GetRegistryUri(moduleReference), moduleReference.Repository, this.tokenCredential);
 
-        private static async Task<(OciManifest,Stream, string)> DownloadManifestAsync(OciArtifactModuleReference moduleReference, ContainerRegistryBlobClient client)
+        private static async Task<(Oci.OciManifest, Stream, string)> DownloadManifestAsync(OciArtifactModuleReference moduleReference, ContainerRegistryBlobClient client)
         {
             Response<DownloadManifestResult> manifestResponse;
             try
@@ -87,35 +86,41 @@ namespace Bicep.Core.Registry
                 throw new OciModuleRegistryException("The module does not exist in the registry.", exception);
             }
 
-            ValidateManifestResponse(manifestResponse);
+            var stream = ValidateManifestResponse(manifestResponse);
 
             // the SDK doesn't expose all the manifest properties we need
             // so we need to deserialize the manifest ourselves to get everything
-            var stream = manifestResponse.Value.Content;
-            stream.Position = 0;
             var deserialized = DeserializeManifest(stream);
             stream.Position= 0;
 
             return (deserialized, stream, manifestResponse.Value.Digest);
         }
 
-        private static void ValidateManifestResponse(Response<DownloadManifestResult> manifestResponse)
+        private static Stream ValidateManifestResponse(Response<DownloadManifestResult> manifestResponse)
         {
             var digestFromRegistry = manifestResponse.Value.Digest;
 
-            var stream = manifestResponse.Value.Content;
+            var stream = manifestResponse.GetRawResponse().ContentStream;
+            if(stream is null)
+            {
+                throw new OciModuleRegistryException($"Manifest stream is null.");
+            }
+
             stream.Position = 0;
 
             // TODO: The registry may use a different digest algorithm - we need to handle that
-            string digestFromContent = DigestHelper.ComputeDigest(DigestHelper.AlgorithmIdentifierSha256, stream);
+            string digestFromContent = DescriptorFactory.ComputeDigest(DescriptorFactory.AlgorithmIdentifierSha256, stream);
 
             if (!string.Equals(digestFromRegistry, digestFromContent, DigestComparison))
             {
                 throw new OciModuleRegistryException($"There is a mismatch in the manifest digests. Received content digest = {digestFromContent}, Digest in registry response = {digestFromRegistry}");
             }
+
+            stream.Position = 0;
+            return stream;
         }
 
-        private static async Task<Stream> ProcessManifest(ContainerRegistryBlobClient client, OciManifest manifest)
+        private static async Task<Stream> ProcessManifest(ContainerRegistryBlobClient client, Oci.OciManifest manifest)
         {
             ProcessConfig(manifest.Config);
             if (manifest.Layers.Length != 1)
@@ -138,7 +143,7 @@ namespace Bicep.Core.Registry
             }
 
             stream.Position = 0;
-            string digestFromContents = DigestHelper.ComputeDigest(DigestHelper.AlgorithmIdentifierSha256, stream);
+            string digestFromContents = DescriptorFactory.ComputeDigest(DescriptorFactory.AlgorithmIdentifierSha256, stream);
             stream.Position = 0;
 
             if(!string.Equals(descriptor.Digest, digestFromContents, DigestComparison))
@@ -183,11 +188,11 @@ namespace Bicep.Core.Registry
             }
         }
 
-        private static OciManifest DeserializeManifest(Stream stream)
+        private static Oci.OciManifest DeserializeManifest(Stream stream)
         {
             try
             {
-                return OciSerialization.Deserialize<OciManifest>(stream);
+                return OciSerialization.Deserialize<Oci.OciManifest>(stream);
             }
             catch(Exception exception)
             {

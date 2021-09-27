@@ -2,9 +2,7 @@
 // Licensed under the MIT License.
 
 using Azure;
-using Azure.Core;
-using Bicep.Core.Registry.Oci;
-using Bicep.Core.RegistryClient;
+using Azure.Containers.ContainerRegistry.Specialized;
 using Moq;
 using System.Collections.Concurrent;
 using System.Collections.Immutable;
@@ -18,9 +16,9 @@ namespace Bicep.Core.UnitTests.Registry
     /// <summary>
     /// Mock OCI registry blob client. This client is intended to represent a single repository within a specific registry Uri.
     /// </summary>
-    public class MockRegistryBlobClient: BicepRegistryBlobClient
+    public class MockRegistryBlobClient: ContainerRegistryBlobClient
     {
-        private static MockRepository Repository = new(MockBehavior.Strict);
+        private static readonly MockRepository Repository = new(MockBehavior.Strict);
 
         public MockRegistryBlobClient() : base()
         {
