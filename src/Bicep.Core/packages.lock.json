@@ -20,6 +20,16 @@
           "Azure.Bicep.Types": "0.1.245"
         }
       },
+      "Azure.Containers.ContainerRegistry": {
+        "type": "Direct",
+        "requested": "[1.1.0-beta.1, )",
+        "resolved": "1.1.0-beta.1",
+        "contentHash": "86uhH77c83d4kbn/YUMVThR9Fni/aQCtgZK6w1Fofs9BHSLyanYafWBTxMJ+IRZt4fH6kRCYAHiDPDWN6IS4UA==",
+        "dependencies": {
+          "Azure.Core": "1.19.0",
+          "System.Text.Json": "4.6.0"
+        }
+      },
       "Azure.Deployments.Core": {
         "type": "Direct",
         "requested": "[1.0.253, )",
@@ -1473,12 +1483,6 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
-        }
-      },
-      "bicep.core.registryclient": {
-        "type": "Project",
-        "dependencies": {
-          "Azure.Core": "1.14.0"
         }
       }
     },
