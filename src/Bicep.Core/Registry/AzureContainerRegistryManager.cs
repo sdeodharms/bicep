@@ -2,11 +2,10 @@
 // Licensed under the MIT License.
 
 using Azure;
+using Azure.Containers.ContainerRegistry.Specialized;
 using Azure.Core;
 using Bicep.Core.Modules;
 using Bicep.Core.Registry.Oci;
-using Bicep.Core.RegistryClient;
-using Bicep.Core.RegistryClient.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -78,14 +77,14 @@ namespace Bicep.Core.Registry
 
         private static Uri GetRegistryUri(OciArtifactModuleReference moduleReference) => new Uri($"https://{moduleReference.Registry}");
 
-        private BicepRegistryBlobClient CreateBlobClient(OciArtifactModuleReference moduleReference) => this.clientFactory.CreateBlobClient(GetRegistryUri(moduleReference), moduleReference.Repository, this.tokenCredential);
+        private ContainerRegistryBlobClient CreateBlobClient(OciArtifactModuleReference moduleReference) => this.clientFactory.CreateBlobClient(GetRegistryUri(moduleReference), moduleReference.Repository, this.tokenCredential);
 
-        private static async Task<(OciManifest,Stream, string)> DownloadManifestAsync(OciArtifactModuleReference moduleReference, BicepRegistryBlobClient client)
+        private static async Task<(OciManifest,Stream, string)> DownloadManifestAsync(OciArtifactModuleReference moduleReference, ContainerRegistryBlobClient client)
         {
             Response<DownloadManifestResult> manifestResponse;
             try
             {
-                manifestResponse = await client.DownloadManifestAsync(moduleReference.Tag, new DownloadManifestOptions(ContentType.ApplicationVndOciImageManifestV1Json));
+                manifestResponse = await client.DownloadManifestAsync(moduleReference.Tag);
             }
             catch(RequestFailedException exception) when (exception.Status == 404)
             {
