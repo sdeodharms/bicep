@@ -17,6 +17,9 @@ namespace Bicep.Core.Registry
             // ensure User-Agent mentions us
             options.Diagnostics.ApplicationId = $"{LanguageConstants.LanguageId}/{ThisAssembly.AssemblyFileVersion}";
 
+            // TODO: Add support for national clouds
+            options.Audience = ContainerRegistryAudience.AzureResourceManagerPublicCloud;
+
             return new(registryUri, credential, repository, options);
         }
     }
