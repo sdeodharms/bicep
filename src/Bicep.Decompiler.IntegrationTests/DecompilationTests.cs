@@ -99,7 +99,7 @@ namespace Bicep.Core.IntegrationTests
             var dispatcher = new ModuleDispatcher(BicepTestConstants.RegistryProvider);
             var sourceFileGrouping = SourceFileGroupingBuilder.Build(BicepTestConstants.FileResolver, dispatcher, workspace, bicepUri);
             var configuration = BicepTestConstants.BuiltInConfigurationWithAnalyzersDisabled;
-            var compilation = new Compilation(nsProvider, sourceFileGrouping, configuration);
+            var compilation = new Compilation(nsProvider, sourceFileGrouping, configuration, BicepTestConstants.ApiVersionProvider);
             var diagnosticsByBicepFile = compilation.GetAllDiagnosticsByBicepFile();
 
             using (new AssertionScope())

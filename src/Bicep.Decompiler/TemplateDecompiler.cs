@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using Bicep.Core.ApiVersion;
 using Bicep.Core.Configuration;
 using Bicep.Core.Decompiler.Rewriters;
 using Bicep.Core.Extensions;
@@ -27,6 +28,7 @@ namespace Bicep.Decompiler
         private readonly IFileResolver fileResolver;
         private readonly IModuleRegistryProvider registryProvider;
         private readonly IConfigurationManager configurationManager;
+        private readonly ApiVersionProvider apiVersionProvider = new ApiVersionProvider();
 
         public TemplateDecompiler(INamespaceProvider namespaceProvider, IFileResolver fileResolver, IModuleRegistryProvider registryProvider, IConfigurationManager configurationManager)
         {
@@ -122,7 +124,7 @@ namespace Bicep.Decompiler
             var hasChanges = false;
             var dispatcher = new ModuleDispatcher(this.registryProvider);
             var sourceFileGrouping = SourceFileGroupingBuilder.Build(fileResolver, dispatcher, workspace, entryUri);
-            var compilation = new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration());
+            var compilation = new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration(), apiVersionProvider);
 
             foreach (var (fileUri, sourceFile) in workspace.GetActiveSourceFilesByUri())
             {
@@ -140,7 +142,7 @@ namespace Bicep.Decompiler
                     workspace.UpsertSourceFile(newFile);
 
                     sourceFileGrouping = SourceFileGroupingBuilder.Build(fileResolver, dispatcher, workspace, entryUri);
-                    compilation = new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration());
+                    compilation = new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration(), apiVersionProvider);
                 }
             }
 

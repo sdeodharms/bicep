@@ -21,6 +21,7 @@ using Bicep.Core.Semantics.Namespaces;
 using Bicep.Core.Features;
 using Bicep.Core.Configuration;
 using IOFileSystem = System.IO.Abstractions.FileSystem;
+using Bicep.Core.ApiVersion;
 
 namespace Bicep.Wasm
 {
@@ -161,7 +162,7 @@ namespace Bicep.Wasm
             var configurationManager = new ConfigurationManager(new IOFileSystem());
             var sourceFileGrouping = SourceFileGroupingBuilder.Build(fileResolver, dispatcher, workspace, fileUri);
 
-            return new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration());
+            return new Compilation(namespaceProvider, sourceFileGrouping, configurationManager.GetBuiltInConfiguration(), new ApiVersionProvider());
         }
 
         private static string ReadStreamToEnd(Stream stream)

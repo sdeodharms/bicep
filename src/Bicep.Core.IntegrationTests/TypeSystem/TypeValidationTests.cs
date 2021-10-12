@@ -21,7 +21,7 @@ namespace Bicep.Core.IntegrationTests
         {
             var typeProvider = TestTypeHelper.CreateProviderWithTypes(definedTypes);
             var configuration = BicepTestConstants.BuiltInConfigurationWithAnalyzersDisabled;
-            var compilation = new Compilation(typeProvider, SourceFileGroupingFactory.CreateFromText(programText, BicepTestConstants.FileResolver), configuration);
+            var compilation = new Compilation(typeProvider, SourceFileGroupingFactory.CreateFromText(programText, BicepTestConstants.FileResolver), configuration, BicepTestConstants.ApiVersionProvider);
             return compilation.GetEntrypointSemanticModel();
         }
 
