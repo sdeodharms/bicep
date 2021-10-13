@@ -44,26 +44,29 @@
             "default": {
                 "core": {
                     "enabled": true,
-                    "rules": {
-                        "no-hardcoded-env-urls": {
-                            "level": "warning"
-                        },
-                        "no-unused-params": {
-                            "level": "warning"
-                        },
-                        "no-unused-vars": {
-                            "level": "warning"
-                        },
-                        "prefer-interpolation": {
-                            "level": "warning"
-                        },
-                        "secure-parameter-default": {
-                            "level": "warning"
-                        },
-                        "simplify-interpolation": {
-                            "level": "warning"
-                        }
+                  "rules": {
+                    "no-hardcoded-env-urls": {
+                      "level": "warning"
+                    },
+                    "no-unused-params": {
+                      "level": "warning"
+                    },
+                    "no-unused-vars": {
+                      "level": "warning"
+                    },
+                    "prefer-interpolation": {
+                      "level": "warning"
+                    },
+                    "secure-parameter-default": {
+                      "level": "warning"
+                    },
+                    "simplify-interpolation": {
+                      "level": "warning"
+                    },
+                    "use-recent-api-version": {
+                      "level": "warning"
                     }
+                  }
                 }
             },
             "properties": {
@@ -172,6 +175,16 @@
                                     "allOf": [
                                         {
                                             "description": "It isn't necessary to use interpolation to reference a parameter or variable. See https://aka.ms/bicep/linter/simplify-interpolation"
+                                        },
+                                        {
+                                            "$ref": "#/definitions/rule"
+                                        }
+                                    ]
+                                },
+                                "use-recent-api-version": {
+                                    "allOf": [
+                                        {
+                                            "description": "Use recent api version. See https://aka.ms/bicep/linter/use-recent-api-version"
                                         },
                                         {
                                             "$ref": "#/definitions/rule"
