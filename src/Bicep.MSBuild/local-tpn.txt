@@ -21,20 +21,20 @@ General Public License.
 System.Buffers 4.5.1 - MIT
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) 2011, Google Inc.
-(c) 1997-2005 Sean Eron Anderson.
+(c) 1997-2005 Sean Eron Anderson
 Copyright (c) 1991-2017 Unicode, Inc.
+Copyright (c) 2015 The Chromium Authors
 Portions (c) International Organization
-Copyright (c) 2015 The Chromium Authors.
 Copyright (c) 2004-2006 Intel Corporation
 Copyright (c) .NET Foundation Contributors
 Copyright (c) .NET Foundation and Contributors
 Copyright (c) 2011 Novell, Inc (http://www.novell.com)
 Copyright (c) 1995-2017 Jean-loup Gailly and Mark Adler
 Copyright (c) 2015 Xamarin, Inc (http://www.xamarin.com)
-Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
-Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers THIS WORK IS PROVIDED AS
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors
+Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers
 
 The MIT License (MIT)
 
@@ -68,41 +68,44 @@ SOFTWARE.
 System.Collections.Immutable 5.0.0 - MIT
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) Andrew Arnott
 Copyright 2018 Daniel Lemire
-Copyright 2012 the V8 project
-Copyright (c) .NET Foundation.
+Copyright (c) .NET Foundation
 Copyright (c) 2011, Google Inc.
+Copyright (c) 2020 Dan Shechter
+(c) 1997-2005 Sean Eron Anderson
 Copyright (c) 1998 Microsoft. To
-(c) 1997-2005 Sean Eron Anderson.
 Copyright (c) 2017 Yoshifumi Kawai
 Copyright (c) Microsoft Corporation
 Copyright (c) 2007 James Newton-King
 Copyright (c) 2012-2014, Yann Collet
+Copyright (c) 1991-2020 Unicode, Inc.
 Copyright (c) 2013-2017, Alfred Klomp
+Copyright 2012 the V8 project authors
+Copyright (c) 2011-2020 Microsoft Corp
 Copyright (c) 2015-2017, Wojciech Mula
 Copyright (c) 2005-2007, Nick Galbreath
+Copyright (c) 2015 The Chromium Authors
 Copyright (c) 2018 Alexander Chermyanin
+Copyright (c) The Internet Society 1997
 Portions (c) International Organization
-Copyright (c) 2015 The Chromium Authors.
-Copyright (c) The Internet Society 1997.
 Copyright (c) 2004-2006 Intel Corporation
 Copyright (c) 2013-2017, Milosz Krajewski
 Copyright (c) 2016-2017, Matthieu Darbois
+Copyright (c) The Internet Society (2003)
 Copyright (c) .NET Foundation Contributors
-Copyright (c) The Internet Society (2003).
 Copyright (c) .NET Foundation and Contributors
 Copyright (c) 2011 Novell, Inc (http://www.novell.com)
 Copyright (c) 1995-2017 Jean-loup Gailly and Mark Adler
 Copyright (c) 2015 Xamarin, Inc (http://www.xamarin.com)
-Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors
 Copyright (c) 2014 Ryan Juckett http://www.ryanjuckett.com
 Copyright (c) 1990- 1993, 1996 Open Software Foundation, Inc.
-Copyright (c) 2015 THL A29 Limited, a Tencent company, and Milo Yip.
-Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers THIS WORK IS PROVIDED AS
-Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 The Regents of the University of California.
-Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass.
+Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers
+Copyright (c) 2015 THL A29 Limited, a Tencent company, and Milo Yip
+Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 The Regents of the University of California
+Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass
 Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass. To
 
 The MIT License (MIT)
@@ -190,20 +193,20 @@ SOFTWARE.
 System.Memory 4.5.4 - MIT
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) 2011, Google Inc.
-(c) 1997-2005 Sean Eron Anderson.
+(c) 1997-2005 Sean Eron Anderson
 Copyright (c) 1991-2017 Unicode, Inc.
+Copyright (c) 2015 The Chromium Authors
 Portions (c) International Organization
-Copyright (c) 2015 The Chromium Authors.
 Copyright (c) 2004-2006 Intel Corporation
 Copyright (c) .NET Foundation Contributors
 Copyright (c) .NET Foundation and Contributors
 Copyright (c) 2011 Novell, Inc (http://www.novell.com)
 Copyright (c) 1995-2017 Jean-loup Gailly and Mark Adler
 Copyright (c) 2015 Xamarin, Inc (http://www.xamarin.com)
-Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
-Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers THIS WORK IS PROVIDED AS
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors
+Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers
 
 The MIT License (MIT)
 
@@ -281,41 +284,44 @@ SOFTWARE.
 System.Runtime.CompilerServices.Unsafe 5.0.0 - MIT
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) Andrew Arnott
 Copyright 2018 Daniel Lemire
-Copyright 2012 the V8 project
-Copyright (c) .NET Foundation.
+Copyright (c) .NET Foundation
 Copyright (c) 2011, Google Inc.
+Copyright (c) 2020 Dan Shechter
+(c) 1997-2005 Sean Eron Anderson
 Copyright (c) 1998 Microsoft. To
-(c) 1997-2005 Sean Eron Anderson.
 Copyright (c) 2017 Yoshifumi Kawai
 Copyright (c) Microsoft Corporation
 Copyright (c) 2007 James Newton-King
 Copyright (c) 2012-2014, Yann Collet
+Copyright (c) 1991-2020 Unicode, Inc.
 Copyright (c) 2013-2017, Alfred Klomp
+Copyright 2012 the V8 project authors
+Copyright (c) 2011-2020 Microsoft Corp
 Copyright (c) 2015-2017, Wojciech Mula
 Copyright (c) 2005-2007, Nick Galbreath
+Copyright (c) 2015 The Chromium Authors
 Copyright (c) 2018 Alexander Chermyanin
+Copyright (c) The Internet Society 1997
 Portions (c) International Organization
-Copyright (c) 2015 The Chromium Authors.
-Copyright (c) The Internet Society 1997.
 Copyright (c) 2004-2006 Intel Corporation
 Copyright (c) 2013-2017, Milosz Krajewski
 Copyright (c) 2016-2017, Matthieu Darbois
+Copyright (c) The Internet Society (2003)
 Copyright (c) .NET Foundation Contributors
-Copyright (c) The Internet Society (2003).
 Copyright (c) .NET Foundation and Contributors
 Copyright (c) 2011 Novell, Inc (http://www.novell.com)
 Copyright (c) 1995-2017 Jean-loup Gailly and Mark Adler
 Copyright (c) 2015 Xamarin, Inc (http://www.xamarin.com)
-Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors
 Copyright (c) 2014 Ryan Juckett http://www.ryanjuckett.com
 Copyright (c) 1990- 1993, 1996 Open Software Foundation, Inc.
-Copyright (c) 2015 THL A29 Limited, a Tencent company, and Milo Yip.
-Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers THIS WORK IS PROVIDED AS
-Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 The Regents of the University of California.
-Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass.
+Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers
+Copyright (c) 2015 THL A29 Limited, a Tencent company, and Milo Yip
+Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 The Regents of the University of California
+Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass
 Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass. To
 
 The MIT License (MIT)
@@ -759,7 +765,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Microsoft.SourceLink.GitHub 1.1.1 - MIT
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 
 MIT License
 
@@ -834,19 +840,124 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-Microsoft.NETCore.Platforms 1.1.0 - OTHER
+Microsoft.NETCore.Targets 1.1.0 - LicenseRef-scancode-ms-net-library AND OTHER
 
 
-(c) Microsoft Corporation.
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
-OTHER
+LicenseRef-scancode-ms-net-library AND OTHER
 
 ---------------------------------------------------------
 
 ---------------------------------------------------------
 
-Microsoft.NETCore.Targets 1.1.0 - OTHER
+runtime.any.System.Collections 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+runtime.any.System.Runtime.Handles 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+runtime.native.System 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+runtime.native.System.Security.Cryptography.OpenSsl 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+runtime.unix.System.Runtime.Extensions 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+runtime.win.System.Runtime.Extensions 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+System.IO 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2025 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+System.Private.Uri 4.3.0 - LicenseRef-scancode-ms-net-library AND OTHER
+
+
+(c) 2024 GitHub,  Inc.
+(c) Microsoft Corporation
+Copyright (c) .NET Foundation and Contributors
+
+LicenseRef-scancode-ms-net-library AND OTHER
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+Microsoft.NETCore.Platforms 1.1.0 - OTHER
 
 
 (c) Microsoft Corporation.
@@ -862,18 +973,6 @@ Microsoft.Win32.Registry 4.3.0 - OTHER
 
 
 (c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-runtime.any.System.Collections 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -954,18 +1053,6 @@ OTHER
 
 ---------------------------------------------------------
 
-runtime.any.System.Runtime.Handles 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 runtime.any.System.Runtime.InteropServices 4.3.0 - OTHER
 
 
@@ -1017,16 +1104,6 @@ OTHER
 runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0 - OTHER
 
 
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0 - OTHER
-
-
 (c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
@@ -1036,17 +1113,7 @@ OTHER
 
 ---------------------------------------------------------
 
-runtime.native.System 4.3.0 - OTHER
-
-
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-runtime.native.System.Security.Cryptography.OpenSsl 4.3.0 - OTHER
+runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0 - OTHER
 
 
 (c) Microsoft Corporation
@@ -1154,34 +1221,10 @@ OTHER
 
 ---------------------------------------------------------
 
-runtime.unix.System.Runtime.Extensions 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-runtime.win.System.Runtime.Extensions 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 System.Collections 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1191,30 +1234,6 @@ OTHER
 ---------------------------------------------------------
 
 System.Globalization 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-System.IO 4.3.0 - OTHER
-
-
-(c) Microsoft Corporation.
-Copyright (c) .NET Foundation and Contributors
-
-OTHER
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-System.Private.Uri 4.3.0 - OTHER
 
 
 (c) Microsoft Corporation
@@ -1229,7 +1248,7 @@ OTHER
 System.Reflection 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1241,7 +1260,7 @@ OTHER
 System.Reflection.Primitives 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1253,7 +1272,7 @@ OTHER
 System.Resources.ResourceManager 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1281,7 +1300,7 @@ OTHER
 System.Runtime.Extensions 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1293,7 +1312,7 @@ OTHER
 System.Runtime.Handles 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1305,7 +1324,7 @@ OTHER
 System.Runtime.InteropServices 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1317,7 +1336,7 @@ OTHER
 System.Text.Encoding 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
@@ -1349,7 +1368,7 @@ OTHER
 System.Threading.Tasks 4.3.0 - OTHER
 
 
-(c) Microsoft Corporation.
+(c) Microsoft Corporation
 Copyright (c) .NET Foundation and Contributors
 
 OTHER
